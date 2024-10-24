@@ -32,7 +32,5 @@
 	<true/>
 	<key>StandardErrorPath</key>
 	<string>/var/log/check_mk.err</string>
-	<key>WorkingDirectory</key>
-	<string>/var/root</string>
 </dict>
 </plist>

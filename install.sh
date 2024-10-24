@@ -5,17 +5,7 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-if [ -z "$1" ]; then
-    echo "Error: No brew check_mk directory path provided, usage: $0 <directory_path>"
-    exit 1
-fi
-
-if [ ! -d "$1" ]; then
-    echo "Error: Directory '$1' does not exist"
-    exit 1
-fi
-
-cd "$1"
+cd "$(dirname "$0")" || { echo "Error: Failed to change directory to $(dirname "$0")"; exit 1; }
 
 CHECK_MK_LOCAL_PATH="/usr/local/lib/check_mk_agent"
 

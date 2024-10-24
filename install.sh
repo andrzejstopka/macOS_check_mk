@@ -21,7 +21,7 @@ CHECK_MK_LOCAL_PATH="/usr/local/lib/check_mk_agent"
 
 mkdir -p $CHECK_MK_LOCAL_PATH/local
 cp agents/check_mk_agent.macos $CHECK_MK_LOCAL_PATH
-cp -r agents/plugins/ $CHECK_MK_LOCAL_PATH
+cp -r agents/plugins/* $CHECK_MK_LOCAL_PATH
 cp LaunchDaemon/de.mathias-kettner.check_mk.plist /Library/LaunchDaemons/
 ln -s $CHECK_MK_LOCAL_PATH/check_mk_agent.macosx /usr/local/bin/check_mk_agent
 mkdir /etc/check_mk

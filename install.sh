@@ -9,7 +9,8 @@ cd "$(dirname "$0")" || { echo "Error: Failed to change directory to $(dirname "
 
 CHECK_MK_LOCAL_PATH="/usr/local/lib/check_mk_agent"
 
-mkdir -p $CHECK_MK_LOCAL_PATH/local
+mkdir -p $CHECK_MK_LOCAL_PATH
+cp -r local $CHECK_MK_LOCAL_PATH
 cp agents/check_mk_agent.macosx $CHECK_MK_LOCAL_PATH
 cp -r agents/plugins/* $CHECK_MK_LOCAL_PATH
 cp LaunchDaemon/de.mathias-kettner.check_mk.plist /Library/LaunchDaemons/
